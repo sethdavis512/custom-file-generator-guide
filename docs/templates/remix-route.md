@@ -1,5 +1,7 @@
 # Remix route
 
+Git branch: https://github.com/sethdavis512/jarvis/tree/remix-route
+
 ## Generator
 
 ```js title="plopfile.js"
@@ -11,6 +13,14 @@ export default function ({ setGenerator }) {
                 type: 'input',
                 name: 'name',
                 message: 'Name'
+            }
+        ],
+        actions: [
+            {
+                type: 'addMany',
+                destination: process.cwd(),
+                templateFiles: 'plop-templates/remix-route/**/*.hbs',
+                base: 'plop-templates/remix-route'
             }
         ]
     });
@@ -40,3 +50,7 @@ export default function {{pascalCase name}}Route() {
   );
 }
 ```
+
+## Download zip
+
+https://github.com/sethdavis512/jarvis/archive/refs/heads/remix-route.zip

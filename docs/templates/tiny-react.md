@@ -1,6 +1,7 @@
 # Tiny React App
 
-Built using [Parcel](https://parceljs.org/)
+-   Built using [Parcel](https://parceljs.org/)
+-   Git branch: https://github.com/sethdavis512/jarvis/tree/tiny-react
 
 ## Generator
 
@@ -114,3 +115,7 @@ root.render(<App />);
     }
 }
 ```
+
+## Download zip
+
+https://github.com/sethdavis512/jarvis/archive/refs/heads/use-state-machine.zip

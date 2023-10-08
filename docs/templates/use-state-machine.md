@@ -1,5 +1,7 @@
 # useStateMachine
 
+Git branch: https://github.com/sethdavis512/jarvis/tree/use-state-machine
+
 ## Generator
 
 ```js title="plopfile.js"
@@ -24,51 +26,52 @@ export default function ({ setGenerator }) {
 ```ts title="useStateMachine.ts.hbs"
 import { useReducer } from 'react';
 
-export const machineSpec = {
-    // Start disconnected
+type MachineSpec = {
+    initialState: string;
+    states: Record<string, Record<string, string>>;
+};
+
+export const machineSpec: MachineSpec = {
     initialState: 'disconnected',
     states: {
         disconnected: {
-            // when disconnected, if the CONNECT event is received
-            // we transition to "connecting"
             CONNECT: 'connecting'
         },
         connecting: {
-            // when connecting, if the CONNECTION_SUCCESS event is received
-            // we transition to "connected"
             CONNECTION_SUCCESS: 'connected'
         },
         connected: {
-            // when connected, if the DISCONNECT event is received
-            // we transition to "disconnected"
             DISCONNECT: 'disconnected'
         }
     }
 };
 
-export const buildMachineReducer = (spec) => (currentState, event) => {
-    // Get all possible transitions for the current State
-    const stateTransitions = spec.states[currentState];
+type MachineReducer = (currentState: string, event: string) => string;
 
-    // No transitions? Error!
-    if (stateTransitions === undefined) {
-        throw new Error(`No transitions defined for ${currentState}`);
-    }
+export const buildMachineReducer =
+    (spec: MachineSpec): MachineReducer =>
+    (currentState, event) => {
+        const stateTransitions = spec.states[currentState];
 
-    // We try to transition to the next state
-    const nextState = stateTransitions[event];
+        if (stateTransitions === undefined) {
+            throw new Error(`No transitions defined for ${currentState}`);
+        }
 
-    // No next state? Error!
-    if (nextState === undefined) {
-        throw new Error(
-            `Unknown transition for event ${event} in state ${currentState}`
-        );
-    }
+        const nextState = stateTransitions[event];
 
-    // We return the new state
-    return nextState;
-};
+        if (nextState === undefined) {
+            throw new Error(
+                `Unknown transition for event ${event} in state ${currentState}`
+            );
+        }
 
-export const useStateMachine = (spec) =>
+        return nextState;
+    };
+
+export const useStateMachine = (spec: MachineSpec) =>
     useReducer(buildMachineReducer(spec), spec.initialState);
 ```
+
+## Download zip
+
+https://github.com/sethdavis512/jarvis/archive/refs/heads/use-state-machine.zip

@@ -8,6 +8,10 @@ My tool of choice is [Plop.js](https://plopjs.com/). Plop is a powerful "micro-g
 
 In this tutorial, we'll build out a simple React component generator for your Typescript projects. By the end, you'll have a fully functioning CLI that is customized to your file generating needs. Let's get started.
 
-## Prerequisites
+:::info
 
-You must have node & npm installed. For more information, visit [https://nodejs.org/](https://nodejs.org/).
+You must have `node` & `npm` installed to complete the tutorial
+
+:::
+
+For more information, visit [https://nodejs.org/](https://nodejs.org/).

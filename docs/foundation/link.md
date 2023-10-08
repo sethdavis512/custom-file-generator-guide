@@ -16,10 +16,19 @@ For the `ts-component` generator, the pseudo syntax would be:
 <cli-name> <generator-name> <component-name>
 ```
 
-Example:
+A real world usage:
 
-```bash
+```bash title="Example"
 jarvis ts-component Button
+```
+
+```bash title="Example output"
+~/Desktop/playground
+❯ jarvis
+? Component name Button
+✔  +! 2 files added
+ -> /Users/seth/Desktop/cfg-playground/Button/index.ts
+ -> /Users/seth/Desktop/cfg-playground/Button/Button.tsx
 ```
 
 Tada! Button is ready to go!

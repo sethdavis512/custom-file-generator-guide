@@ -28,7 +28,8 @@ const sidebars = {
                 'foundation/templates',
                 'foundation/link',
                 'foundation/complete'
-            ]
+            ],
+            collapsed: false
         },
         {
             type: 'category',
@@ -37,7 +38,7 @@ const sidebars = {
                 {
                     type: 'doc',
                     label: 'React component (TS)',
-                    id: 'templates/ts-component'
+                    id: 'templates/react-component'
                 },
                 'templates/remix-route',
                 {
@@ -45,8 +46,15 @@ const sidebars = {
                     label: 'Tiny React App',
                     id: 'templates/tiny-react'
                 },
-                'templates/use-state-machine'
-            ]
+                'templates/use-state-machine',
+                'templates/use-fetch'
+            ],
+            collapsed: false
+        },
+        {
+            type: 'html',
+            value: '<hr />',
+            defaultStyle: true
         },
         {
             type: 'link',
@@ -55,8 +63,18 @@ const sidebars = {
         },
         {
             type: 'link',
+            label: 'Handlebars.js',
+            href: 'https://handlebarsjs.com/'
+        },
+        {
+            type: 'link',
             label: 'Inquirer prompts',
             href: 'https://github.com/SBoudrias/Inquirer.js/tree/master#readme'
+        },
+        {
+            type: 'link',
+            label: 'Jarvis example',
+            href: 'https://github.com/sethdavis512/jarvis'
         }
     ]
 };

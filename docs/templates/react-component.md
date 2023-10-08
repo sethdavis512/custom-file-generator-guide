@@ -1,11 +1,13 @@
 # React component (TypeScript)
 
+Git branch: https://github.com/sethdavis512/jarvis/tree/react-component
+
 ## Generator
 
 ```js title="plopfile.js"
 export default function ({ setGenerator }) {
-    setGenerator('ts-component', {
-        description: 'Tiny React app built using Parcel',
+    setGenerator('react-component', {
+        description: 'React component (TypeScript)',
         prompts: [
             {
                 type: 'input',
@@ -17,8 +19,8 @@ export default function ({ setGenerator }) {
             {
                 type: 'addMany',
                 destination: `${process.cwd()}/{{ kebabCase name }}/`,
-                templateFiles: `plop-templates/ts-component/**/*.hbs`,
-                base: `plop-templates/ts-component`
+                templateFiles: `plop-templates/react-component/**/*.hbs`,
+                base: `plop-templates/react-component`
             }
         ]
     });
@@ -42,3 +44,7 @@ export default function {{name}}({ children }: {{name}}Props): JSX.Element {
     return <>{children}</>;
 }
 ```
+
+## Download zip
+
+https://github.com/sethdavis512/jarvis/archive/refs/heads/react-component.zip
