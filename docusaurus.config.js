@@ -46,13 +46,6 @@ const config = {
                         'https://github.com/sethdavis512/custom-file-generator-guide/tree/main/'
                 },
                 blog: false,
-                // blog: {
-                //     showReadingTime: true,
-                //     // Please change this to your repo.
-                //     // Remove this to remove the "edit this page" links.
-                //     editUrl:
-                //         'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'
-                // },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css')
                 }
@@ -67,18 +60,7 @@ const config = {
             image: 'img/docusaurus-social-card.jpg',
             navbar: {
                 title: 'CFG',
-                // logo: {
-                //     alt: 'Custom file generator logo',
-                //     src: 'img/logo.svg'
-                // },
                 items: [
-                    // {
-                    //     type: 'docSidebar',
-                    //     sidebarId: 'tutorialSidebar',
-                    //     position: 'left',
-                    //     label: 'Begin'
-                    // },
-                    // { to: '/blog', label: 'Blog', position: 'left' },
                     {
                         href: 'https://github.com/sethdavis512/custom-file-generator-guide',
                         label: 'GitHub',
@@ -94,40 +76,10 @@ const config = {
                         items: [
                             {
                                 label: 'Tutorial',
-                                to: '/docs/intro'
+                                to: '/'
                             }
                         ]
                     }
-                    // {
-                    //     title: 'Community',
-                    //     items: [
-                    //         {
-                    //             label: 'Stack Overflow',
-                    //             href: 'https://stackoverflow.com/questions/tagged/docusaurus'
-                    //         },
-                    //         {
-                    //             label: 'Discord',
-                    //             href: 'https://discordapp.com/invite/docusaurus'
-                    //         },
-                    //         {
-                    //             label: 'Twitter',
-                    //             href: 'https://twitter.com/docusaurus'
-                    //         }
-                    //     ]
-                    // },
-                    // {
-                    //     title: 'More',
-                    //     items: [
-                    //         {
-                    //             label: 'Blog',
-                    //             to: '/blog'
-                    //         },
-                    //         {
-                    //             label: 'GitHub',
-                    //             href: 'https://github.com/facebook/docusaurus'
-                    //         }
-                    //     ]
-                    // }
                 ],
                 copyright: `Copyright © ${new Date().getFullYear()} Tech with Seth, Inc. Built with Docusaurus.`
             },
