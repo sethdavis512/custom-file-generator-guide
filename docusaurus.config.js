@@ -38,12 +38,14 @@ const config = {
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 docs: {
+                    routeBasePath: '/',
                     sidebarPath: require.resolve('./sidebars.js'),
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
                     editUrl:
                         'https://github.com/sethdavis512/custom-file-generator-guide/tree/main/'
                 },
+                blog: false,
                 // blog: {
                 //     showReadingTime: true,
                 //     // Please change this to your repo.
@@ -65,17 +67,17 @@ const config = {
             image: 'img/docusaurus-social-card.jpg',
             navbar: {
                 title: 'CFG',
-                logo: {
-                    alt: 'Custom file generator logo',
-                    src: 'img/logo.svg'
-                },
+                // logo: {
+                //     alt: 'Custom file generator logo',
+                //     src: 'img/logo.svg'
+                // },
                 items: [
-                    {
-                        type: 'docSidebar',
-                        sidebarId: 'tutorialSidebar',
-                        position: 'left',
-                        label: 'Begin'
-                    },
+                    // {
+                    //     type: 'docSidebar',
+                    //     sidebarId: 'tutorialSidebar',
+                    //     position: 'left',
+                    //     label: 'Begin'
+                    // },
                     // { to: '/blog', label: 'Blog', position: 'left' },
                     {
                         href: 'https://github.com/sethdavis512/custom-file-generator-guide',

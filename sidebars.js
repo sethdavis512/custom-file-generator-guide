@@ -57,6 +57,11 @@ const sidebars = {
             defaultStyle: true
         },
         {
+            type: 'html',
+            value: '<strong>Resources</strong>',
+            defaultStyle: true
+        },
+        {
             type: 'link',
             label: 'Plop.js',
             href: 'https://plopjs.com'
