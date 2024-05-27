@@ -2,7 +2,7 @@
 slug: /
 ---
 
-# Intro
+# Custom File Generator
 
 As a developer who works on multiple React projects daily, I like having a tool that can help me quickly and efficiently write consistent code. One of the best ways I've found is writing a custom command line tool to rapidly scaffold out my most common code patterns.
 
